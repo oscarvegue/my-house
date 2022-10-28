@@ -16,7 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square grass;
-
+    private Circle atardecer;
     /**
      * Constructor for objects of class Picture
      */
@@ -24,7 +24,7 @@ public class Picture
     {
         // nothing to do... instance variables are automatically set to null
     }
-
+     
     /**
      * Draw this picture.
      */
@@ -78,7 +78,14 @@ public class Picture
             sun.changeColor("black");
         }
     }
-
+    /**
+     * Change
+     */
+    public void atardecer()
+    {
+        if (wall != null)   // only if it's painted already...
+        sun.slowMoveVertical(100);
+    }
     /**
      * Change this picture to use color display
      */
