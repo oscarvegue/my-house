@@ -17,6 +17,7 @@ public class Picture
     private Circle sun;
     private Square grass;
     private Circle atardecer;
+    private Person persona;
     /**
      * Constructor for objects of class Picture
      */
@@ -85,6 +86,11 @@ public class Picture
     {
         if (wall != null)   // only if it's painted already...
         sun.slowMoveVertical(100);
+        persona = new Person();
+        persona.makeVisible();
+        persona.moveVertical(30);
+        persona.moveHorizontal(-250);
+        persona.slowMoveHorizontal(180);
     }
     /**
      * Change this picture to use color display
